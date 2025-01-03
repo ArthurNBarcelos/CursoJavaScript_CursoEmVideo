@@ -3,9 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Exercício 004</title>
+    <style>
+        body{
+            font: normal 20pt Arial;
+        }
+    </style>
 </head>
 <body>
-    
+    <script>
+        var nome = window.prompt("Qual o nome do seu cachorro?");
+        document.write(`O nome do seu cachorro tem ${nome.length} letras<br>`)      
+        document.write(`Quando você <strong>grita</strong> com ele, você fala ${nome.toUpperCase()}.<br>`)
+        document.write(`Agora, quando você chama ele sussurrando, você fala ${nome.toLowerCase()}.`)
+    </script>
 </body>
 </html>
