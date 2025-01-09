@@ -18,10 +18,13 @@
      <h1>Primeiro contato com DOM (Document Object Model)</h1>
      <p>Este também é meu <strong>primeiro</strong> site utilizando</p>
      <p><strong>Live Server</strong></p>
-     <div id="msg">Clique aqui!</div> <!--eu quem defino uma id para um elemento-->
-     <div name="123">O nome desta DIV é 123</div>
+     <div id="msg">O ID desta DIV é a123</div> <!--eu quem defino uma id para um elemento-->
+     <div name="a123">O nome desta DIV é a123</div>
      <br>
-
+     <div class="aviao">A classe desta DIV é a123</div>
+     <br>
+     <div id="oa">Vou selecionar este elemento por seu Seletor CSS</div><!--para isto eu preciso de um ID-->
+     <br>
     <script>
         //Não é a melhor, mas é o jeito mais simples de se adicionar textos no site
         window.document.write('Este texto foi adicionado no site utilizando o DOM do JavaScript <br>');
@@ -53,7 +56,21 @@
         window.document.getElementById('msg').innerHTML = ('Segunda vez alterando o texto deste elemento e desta vez trouxe também o <strong>HTML</strong>!<br><br>');
 
         //Selecioando um Elemento pelo seu nome (eu quem defino o nome)
-        
+        var a123 = window.document.getElementsByName('a123')[0];
+        a123.innerHTML = 'Reescrevendo esta linha por meio do DOM, selecionando o elemento pelo nome';
+        a123.style.color = 'black';
+        a123.style.background = 'white';
+
+        //Selecionando um Elemento pela sua Classe
+        var aviao = window.document.getElementsByClassName('aviao')[0];
+        aviao.innerText = 'Texto reescrito, selecionando o elemento pela sua classe.';
+        aviao.style.color = 'green';
+
+        //Selecionando um Elemento por meio do Seletor CSS
+        var a = window.document.querySelector('div#oa')//Com querySelector, utilizo a sintaxe do CSS
+        //Toda ID é representada por uma #
+        //Toda Classe é representada por um .
+        a.style.color = 'yellow';
 
     </script>
 
