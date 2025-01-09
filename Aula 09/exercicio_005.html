@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 005</title>
+
+    <style>
+        body {
+            background: rgb(102, 170, 247);
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+
+</head>
+<body>
+     <h1>Primeiro contato com DOM (Document Object Model)</h1>
+     <p>Este também é meu primeiro site utilizando o:</p>
+     <p><strong>Live Server</strong></p>
+     <div>Clique aqui!</div>
+
+    <script>
+        //Não é a melhor, mas é o jeito mais simples de se adicionar textos no site
+        window.document.write('Texto adicionado no site utilizando o DOM do JavaScript <br>');
+        window.document.write('URL usando DOM: ' + window.document.URL + '<br>');
+        window.document.write('Charset usando DOM' + window.document.charset + '<br><br>');
+
+        //Selecionando Elementos pela TagName
+        var p1 = window.document.getElementsByTagName('p')[0];
+        //('p') determina que estou selecionando todos os elementos <p> do site
+        //[0] determina que estou selecionando o primeiro elemento <p> do site
+
+        window.document.write('Parágrafo selecionado: <br>' + p1.innerText);
+        //.innerText retorna o texto de um elemento, neste caso "Este também é meu primeiro site utilizando o:"
+
+        //Utilizando DOM para modificar a cor da fonte do parágrafo selecionado anteriormente
+        p1.style.color = 'red';
+    </script>
+
+</body>
+</html>
