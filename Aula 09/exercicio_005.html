@@ -16,13 +16,15 @@
 </head>
 <body>
      <h1>Primeiro contato com DOM (Document Object Model)</h1>
-     <p>Este também é meu primeiro site utilizando o:</p>
+     <p>Este também é meu <strong>primeiro</strong> site utilizando</p>
      <p><strong>Live Server</strong></p>
-     <div>Clique aqui!</div>
+     <div id="msg">Clique aqui!</div> <!--eu quem defino uma id para um elemento-->
+     <div name="123">O nome desta DIV é 123</div>
+     <br>
 
     <script>
         //Não é a melhor, mas é o jeito mais simples de se adicionar textos no site
-        window.document.write('Texto adicionado no site utilizando o DOM do JavaScript <br>');
+        window.document.write('Este texto foi adicionado no site utilizando o DOM do JavaScript <br>');
         window.document.write('URL usando DOM: ' + window.document.URL + '<br>');
         window.document.write('Charset usando DOM' + window.document.charset + '<br><br>');
 
@@ -31,11 +33,28 @@
         //('p') determina que estou selecionando todos os elementos <p> do site
         //[0] determina que estou selecionando o primeiro elemento <p> do site
 
-        window.document.write('Parágrafo selecionado: <br>' + p1.innerText);
+        window.document.write('<strong>.innerText</strong> retorna o texto do elemento, mas sem os HTMLs dentro dele: <br>' + p1.innerText + '<br><br>');
         //.innerText retorna o texto de um elemento, neste caso "Este também é meu primeiro site utilizando o:"
 
-        //Utilizando DOM para modificar a cor da fonte do parágrafo selecionado anteriormente
+        window.document.write('Para retornar o texto do elemento COM os HTMLs junto, usamos a função <strong>.innerHTML:</strong> <br>' + p1.innerHTML + '<br><br>');
+        //.innerHTML retorna o texto do elemento, mas com os HTMLs dentro dele
+
+        //Utilizando DOM para modificar estilizações
         p1.style.color = 'red';
+        var body = window.document.body;
+        body.style.background = 'black';
+
+        //Selecionando um Elemento pelo seu ID (eu quem defino o ID)
+        var msg = window.document.getElementById('msg');
+        msg.style.color = 'blue'; //mudando a cor do elemento div com id=msg
+        msg.innerText = 'Este não é o texto original deste elemento!'; //mudando o texto do elemento div com id=msg
+
+        //É possível alterar o texto sem criar variável. Isto é recomendado para quando só se vai utilizar uma vez só:
+        window.document.getElementById('msg').innerHTML = ('Segunda vez alterando o texto deste elemento e desta vez trouxe também o <strong>HTML</strong>!<br><br>');
+
+        //Selecioando um Elemento pelo seu nome (eu quem defino o nome)
+        
+
     </script>
 
 </body>
