@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práticando DOM</title>
+    <style>
+        body {
+            background-color: rgb(13, 14, 26);
+        }
+        h1 {
+            color: rgb(216, 125, 39);
+        }
+        h2 {
+            color: rgb(216, 125, 39);
+        }
+        p {
+            color:rgb(172, 101, 36);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Na última aula eu aprendi sobre DOM</h1>
+    <h2>Document Object Model</h2>
+    <p>O DOM é uma representação de um site HTML ou XML em forma de árvore hierárquica. Sua principal utilidade é alterar valores de um elemento HTML por meio de scripts, que no caso deste curso é por meio de JavaScript.</p>
+    <p>
+        Existem diferentes maneiras de selecionar elementos DOM dentro do JavaScript, as 5 principais formas são:<br>
+        1. Por sua TagName;<br>
+        2. Por seu Name;<br>
+        3. Por sua ID;<br>
+        4. Por sua Class;<br>
+        5. Por seu seletor CSS.
+    </p>
+    <p>Elemento Teste 1 (TagName)</p>
+    <p name="dois">Elemento Teste 2 (Name)</p>
+    <p id="3">Elemento Teste 3 (ID)</p>
+    <p class="4">Elemento Teste 4 (Class)</p>
+    <p id="cinco">Elemento Teste 5 (Seletor CSS ID)</p>
+    <p id="six" class="seis">Elemento Teste 6 (Seletor CSS Class)</p>
+    <p>Elemento Teste 7</p>
+
+    <script>
+        //Selecionando por TagName
+        var Selec_TagName = window.document.getElementsByTagName('p')[2];
+        Selec_TagName.style.color = 'purple';
+
+        //Selecionando por Name
+        var Selec_Name = window.document.getElementsByName('dois')[0];
+        Selec_Name.style.color = 'red';
+
+        //Selecionando por ID
+        var Selec_ID = window.document.getElementById('3');
+        Selec_ID.style.color = 'orange';
+
+        //Selecionando por Class
+        var Selec_Class = window.document.getElementsByClassName('4')[0];
+        Selec_Class.style.color = 'yellow';
+
+        //Selecionando por Seletor CSS (Id)
+        var Selec_CSSID = window.document.querySelector('#cinco');
+        Selec_CSSID.style.color = 'orange';
+
+        //Selecionando por Seletor CSS (Class)
+        var Selec_CSSClass = window.document.querySelector('.seis')
+        Selec_CSSClass.style.color = 'red';
+
+        //Reescrevendo o texto do Elemento 7
+        var ele7 = window.document.getElementsByTagName('p')[8];
+        ele7.innerHTML = 'Elemento Teste 7 (Reescrito com <Strong>DOM</Strong>)';
+        ele7.style.color = 'purple';
+    </script>
+</body>
+</html>
