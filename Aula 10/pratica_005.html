@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prática 005</title>
+    <style>
+        p#bt1 {
+            font: bold 20px Arial;
+            color: white;
+            background: black;
+
+            width: 30%;
+            height: 50px;
+            
+            text-align: center;
+            line-height: 50px;
+        }
+        p#bt2 {
+            font: bold 17px Arial;
+            color: white;
+            background: black;
+
+            width: 30%;
+            height: 50px;
+            
+            text-align: center;
+            line-height: 50px;            
+        }
+    </style>
+</head>
+<body>
+    <h1>Praticando Eventos DOM</h1>
+    <p id="bt1">
+        Clique aqui!
+    </p>
+    <p id="bt2">
+        Passe o mouse aqui!
+    </p>
+    <script>
+        var bt1 = window.document.getElementById('bt1')
+        bt1.addEventListener('click', clicar)
+        function clicar() {
+            bt1.style.background = 'orange'
+            bt1.innerHTML = '<strong> Obrigado! </strong>'
+        }
+
+        var bt2 = window.document.getElementById('bt2')
+        bt2.addEventListener('mouseenter', entrar)
+        function entrar() {
+            bt2.innerHTML = 'Obrigado, agora tire o mouse daqui!'
+            bt2.style.fontSize = '14px'
+            bt2.style.background = 'orange'
+        }
+        bt2.addEventListener('mouseout', sair)
+        function sair() {
+            bt2.innerHTML = 'Está tudo funcionando!'
+            bt2.style.background = 'black'
+        }
+    </script>
+</body>
+</html>
