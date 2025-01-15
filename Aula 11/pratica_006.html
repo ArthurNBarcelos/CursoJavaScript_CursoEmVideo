@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prática 006</title>
+    <style>
+        body {
+            font: normal 15px Arial;
+        }
+    </style>
+</head>
+<body>
+    <!-- Fazer um site que pergunta de qual país você é e utilizar condições -->
+     <h1>Consulte se possuímos polo em seu país</h1>
+     <p id="par1">
+        Digite seu país: <input type="text" id="inptCountry"> <input type="button" value="Enviar" onclick="enviar()">
+    </p>
+    <script>
+        function enviar() {
+            var country = window.document.querySelector('input#inptCountry') //armazenando o valor inserido
+            var par1 = window.document.querySelector('p#par1')
+            if (country.value == 'Brasil') {
+                par1.innerHTML += '<br>Nós possímos polo no Brasil!'
+            } else if (country.value == 'Japão') {
+                par1.innerHTML += '<br>Nós possímos polo no Japão!'
+            } else {
+                par1.innerHTML += `<br>Infelizmente ainda não possuímos em ${country.value}`
+            }
+            
+        }
+    </script>
+</body>
+</html>

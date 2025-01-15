@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exerício 010</title>
+    <style>
+        body {
+            font: normal 20px Arial;
+        }
+        input {
+            font: normal 17px Arial;
+            width: 150px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de Identificação de Multas</h1>
+    Em que velocidade você dirigia? <input type="number" name="inputVel" id="inputVel">Km/h
+    <input type="button" value="Verificar" onclick="calculo()">
+    <p id="result">Situação: </p>
+
+    <script>
+        function calculo () { //Executando a ação definida através de evento
+            var inputVell = window.document.getElementById('inputVel')//Armazenando o Input
+            var VelNumb = Number(inputVell.value) //Convertendo String para Number
+
+            var result = window.document.querySelector('p#result')
+            result.innerHTML = `<p><strong>Situação:</strong> ${VelNumb}Km/h</p>`
+
+            if (VelNumb > 60) {
+                result.innerHTML += `<strong>Multado!</strong> Você estava acima do limite de velocidade.`
+            } else {
+                result.innerHTML += `<p>Dirija sempre com cinto de segurança!</p>`
+            }
+        }
+    </script>
+</body>
+</html>
