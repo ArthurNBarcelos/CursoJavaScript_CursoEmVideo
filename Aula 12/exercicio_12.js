@@ -1,11 +1,12 @@
+
 var agora = new Date
 var hora = agora.getHours()
+
 if (hora != 1) {
     console.log (`Agora são ${hora} horas`)
 } else {
     console.log (`Agora são ${hora} hora`)
 }
-
 
 /*
 Boa madrugada < 6
