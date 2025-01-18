@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modelo de Exercício</title>
+    <title>Verificador de Idade</title>
     <link rel="stylesheet" href="style.css">
     <!--
     Comando: link:css
@@ -13,15 +13,27 @@
 <body>
 
     <header>
-        <h1>Título</h1>
+        <h1>Verificador de Idade</h1>
     </header>
     
     <section>
-        <div>
-            div 1
+        <div id="nascimento">
+            Ano de nascimento: <input type="number" name="anonasc" id="anonasc" min="1900" max="2025">
         </div>
-        <div>
-            div 2
+        <div id="sexo">
+            Sexo:
+            <input type="radio" name="sexo" id="masc" checked>
+            <label for="masc">Masculino</label>
+            <input type="radio" name="sexo" id="fem">
+            <label for="fem">Feminino</label>
+            <!-- Os nomes de ambas as inputs radio devem ser os mesmos para que não possam haver duas marcações -->
+             <input type="button" value="Verificar" id="verificar" onclick="botao_verificar()">
+        </div>
+        <div id="imagem">
+            imagem
+        </div>
+        <div id="resultado">
+            Um(a) ... nascido(a) em ... possui ... ano(s)
         </div>
     </section>
     
