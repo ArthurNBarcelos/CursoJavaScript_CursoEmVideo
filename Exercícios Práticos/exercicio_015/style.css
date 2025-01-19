@@ -13,27 +13,13 @@ section {
     border-radius: 10px;
     padding: 15px;
     width: 500px;
-    margin: auto; /*Faz ficar centralizado, pois a margem se regula automaticamente*/
+    margin: auto;
     text-align: center;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.295);/*5px (lateral) 5px (vertical) 10px (espalhamento)*/
 }
 
-div {
-    margin: auto;
-    padding: 10px;
-}
-
-input#verificar {
-    color: white;
-    font: normal 15px Arial;
-    background: rgb(70, 142, 236);
-
-    border-color: white;
-    border-radius: 5px;
-}
-
 footer {
-    color: rgba(255, 255, 255, 0.5);
+    color: white;
     text-align: center;
     font-style: italic;
 }
