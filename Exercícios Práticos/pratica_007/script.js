@@ -1,11 +1,11 @@
 function verificar() {
-    data = new Date
-    ano = data.getFullYear()
-    anoNasc = document.getElementById("dataNasc").value
-    sex = document.getElementsByName("rsex")
-    idade = ano - anoNasc
-    msg = document.getElementById("msg")
-    img = document.getElementById("img")
+    var data = new Date
+    var ano = data.getFullYear()
+    var anoNasc = document.getElementById("dataNasc").value
+    var sex = document.getElementsByName("rsex")
+    var idade = ano - anoNasc
+    var msg = document.getElementById("msg")
+    var img = document.getElementById("img")
     
     if(anoNasc == 0) {
         alert("[ERRO] Você precisa digitar um ano de nascimento!")
@@ -18,7 +18,6 @@ function verificar() {
             if (idade < 12) {
                 //Criança
                 img.innerHTML = '<img src="imagens/hcrianca.png" alt="[ERRO] Impossível carregar esta imagem!">'
-                sexIdade
             } else if (idade < 18) {
                 //Jovem
                 img.innerHTML = '<img src="imagens/hjovem.png" alt="[ERRO] Impossível carregar esta imagem!">'
@@ -28,6 +27,13 @@ function verificar() {
             } else {
                 //Idoso
                 img.innerHTML = '<img src="imagens/hidoso.png" alt="[ERRO] Impossível carregar esta imagem!">'
+            }
+            if (idade == 0) {
+                msg.innerHTML = `Um ${genero}, nascido em ${anoNasc}, possui menos de 1 ano.`
+            } else if (idade == 1) {
+                msg.innerHTML = `Um ${genero}, nascido em ${anoNasc}, possui ${idade} ano.`
+            } else {
+                msg.innerHTML = `Um ${genero}, nascido em ${anoNasc}, possui ${idade} anos.`
             }
         } else if (sex[1].checked) {
             //Feminino/Mulher
@@ -45,16 +51,18 @@ function verificar() {
                 //Idoso
                 img.innerHTML = '<img src="imagens/midoso.png" alt="[ERRO] Impossível carregar esta imagem!">'
             }
+            if (idade == 0) {
+                msg.innerHTML = `Uma ${genero}, nascida em ${anoNasc}, possui menos de 1 ano.`
+            } else if (idade == 1) {
+                msg.innerHTML = `Uma ${genero}, nascida em ${anoNasc}, possui ${idade} ano.`
+            } else {
+                msg.innerHTML = `Uma ${genero}, nascida em ${anoNasc}, possui ${idade} anos.`
+            }
         } else {
             alert("[ERRO] Você precisa selecionar um sexo!")
         }
-        if (sex[0].checked) {
-            //Masculino
-            alert('aa')
-        } else {
-            alert('aaa')
-        }
     }
+    
 }
 
 //Criança 0 - 12
