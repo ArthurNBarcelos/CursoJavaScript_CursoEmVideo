@@ -17,6 +17,7 @@ function verificar() {
         if (sex[0].checked) {
             //Masculino/Homem
             genero = "homem"
+            document.body.style.background = "rgb(70, 142, 236)"
             if (idade < 12) {
                 //Criança
                 img.innerHTML = '<img src="imagens/hcrianca.png" alt="[ERRO] Impossível carregar esta imagem!">'
@@ -40,6 +41,7 @@ function verificar() {
         } else if (sex[1].checked) {
             //Feminino/Mulher
             genero = "mulher"
+            document.body.style.background = "pink"
             if (idade < 12) {
                 //Criança
                 img.innerHTML = '<img src="imagens/mcrianca.png" alt="[ERRO] Impossível carregar esta imagem!">'
