@@ -11,6 +11,8 @@ function verificar() {
         alert("[ERRO] Você precisa digitar um ano de nascimento!")
     } else if (anoNasc > ano) {
         alert("[ERRO] Impossível utilizar anos futuros!")
+    } else if (anoNasc < 1925) {
+        alert("[ERRO] Ano mínimo: 1925!")
     } else {
         if (sex[0].checked) {
             //Masculino/Homem
