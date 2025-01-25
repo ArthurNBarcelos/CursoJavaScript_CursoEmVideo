@@ -14,18 +14,12 @@ section {
     padding: 15px;
     width: 500px;
     margin: auto;
+    text-align: center;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.295);/*5px (lateral) 5px (vertical) 10px (espalhamento)*/
 }
 
-input#botão {
-    display: block;
-    margin-top: 5px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 footer {
-    color: rgba(255, 255, 255, 0.5);
+    color: white;
     text-align: center;
     font-style: italic;
 }
