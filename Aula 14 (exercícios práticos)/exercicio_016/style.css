@@ -31,12 +31,8 @@ input#calcular {
     height: 25px;
 }
 
-div#res {
-    padding: 20px;
-}
-
 footer {
-    color: white;
+    color: rgba(255, 255, 255, 0.5);
     text-align: center;
     font-style: italic;
 }
