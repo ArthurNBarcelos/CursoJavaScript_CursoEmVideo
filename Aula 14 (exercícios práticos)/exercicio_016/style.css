@@ -8,6 +8,7 @@ header {
     text-align: center;
 }
 
+
 section {
     background: white;
     border-radius: 10px;
@@ -16,6 +17,22 @@ section {
     margin: auto;
     text-align: center;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.295);/*5px (lateral) 5px (vertical) 10px (espalhamento)*/
+}
+
+div {
+    p {
+        text-align: left;
+        margin: 5px;
+    }
+}
+
+input#calcular {
+    margin: 5px;
+    height: 25px;
+}
+
+div#res {
+    padding: 20px;
 }
 
 footer {
