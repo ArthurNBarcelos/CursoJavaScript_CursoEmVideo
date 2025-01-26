@@ -34,7 +34,7 @@ function calcular() {
 }
 
 /*
-    Código antigo, 
+    Código antigo, funcionava da mesma forma, mas por verificar se "vI > vF ou vI < vF""" antes das outras checagens, eu havia repetido todas elas duas vezes.
 
     if (vI < vF) {
     if (vI != "" || vF != "" || vIn != "") {
