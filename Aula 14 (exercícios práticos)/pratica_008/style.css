@@ -1,0 +1,31 @@
+body {
+    background-color:darkslategrey;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header {
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+section {
+    background-color: white;
+    width: 600px;
+    height: 300px;
+    margin: auto;
+    border-radius: 30px;
+    padding: 5px;
+}
+
+p {
+    text-align: center;
+    font-size: 20px;
+}
+
+footer {
+    color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    padding: 20px;
+    font-style: italic;
+}
